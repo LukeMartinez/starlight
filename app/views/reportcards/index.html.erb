@@ -1,0 +1,21 @@
+<table>
+	<tr>
+		<td> Delivered </td>
+		<td> Bounce </td>
+		<td> Blocked </td>
+		<td> Open </td>
+		<td> Click </td>
+		<td> Complaint </td>
+	</tr>
+
+	<% @report_card.raw_front_end_data_hash.each do |data_for_single_isp| %> 
+		<tr>
+			<% data_for_single_isp.each do |data_point| %>
+						<td> <%=data_point %></td> 
+			<%end%>
+		</tr>	
+	<%end%>
+</table>	
+
+
+
